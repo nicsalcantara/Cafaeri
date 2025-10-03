@@ -1,0 +1,534 @@
+body {
+  background-image: url("pictures/background.png");
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 1s ease-in-out, backgroundFloat 20s ease-in-out infinite;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes backgroundFloat {
+  0%, 100% {
+    background-position: center center;
+  }
+  25% {
+    background-position: 2% 2%;
+  }
+  50% {
+    background-position: center 1%;
+  }
+  75% {
+    background-position: 98% 2%;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+html, body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.header{
+  position:sticky;
+}
+
+
+.header2 {
+  background-color: #F9C27A;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.header2 h2 {
+  font-family: 'IM Fell DW Pica', serif;
+  color: #292515;
+  font-size: 25px;
+  display: inline-block;
+  white-space: nowrap;
+  animation: promoSlide 80s linear infinite alternate;
+  margin: 0;
+}
+
+@keyframes promoSlide {
+  0% { transform: translateX(60vw); }
+  100% { transform: translateX(-60vw); }
+}
+
+
+.nav {
+  background-color: #F2F0F0;
+  width: 100%;
+  height: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0 40px;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: 'IM Fell DW Pica', serif;
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.logo img {
+  transition: all 0.3s ease;
+}
+
+.logo:hover img {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 4px 8px rgba(122, 63, 34, 0.3));
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0 20px;
+  gap: 60px;
+  justify-self: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+
+.nav-links li a {
+  text-decoration: none;
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 30px;
+  color: #7a3f22;
+  transition: all 0.3s;
+  font-style: italic;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+
+.nav-links li a:hover {
+  color: #b5633d;
+  background-color: rgba(185, 99, 61, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(185, 99, 61, 0.2);
+}
+
+.nav-links li a:active {
+  background-color: rgba(185, 99, 61, 0.2);
+  transform: scale(0.98) translateY(-1px);
+}
+
+.hero {
+  background-image: url("pictures/bg.gif");
+  background-size: cover;
+  background-position: center;
+  height: 780px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+
+.subtext {
+  background-color: #FAF4E4;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.subtext p {
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 1.50rem;
+  line-height: 1.7;
+  color: #2d1b0f;
+  max-width: 500px;
+  text-align: center;
+  font-style: italic;
+  margin: 0 auto;   
+}
+
+
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  max-width: 1100px;
+  margin: 60px auto 0 auto; 
+  background: #f9f4e4;
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-text {
+  padding: 40px;
+  text-align: center;
+}
+
+.about-text p {
+  font-family: 'IM Fell DW Pica', serif; 
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #2d1b0f; 
+  max-width: 500px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.pixie-picks-section {
+  text-align: center;
+  margin: 80px auto;
+  max-width: 1200px;
+}
+
+.pixie-picks-title {
+  font-size: 3rem;
+  font-style: italic;
+  margin-bottom: 50px;
+}
+
+.pixie-picks-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 30px; 
+  justify-items: center;
+}
+
+.pixie-picks-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px 20px;
+  width: 260px;   
+  height: 400px; 
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.pixie-picks-card img {
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: contain;
+  margin: 0 auto 15px auto;
+}
+
+.pixie-picks-card h3 {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.pixie-picks-card p {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.pixie-picks-card.orange {
+  background: #f9c784;
+}
+
+.pixie-picks-card.blue {
+  background: #98c1d9;
+}
+
+.potion-pair-section {
+  background: url("pictures/leaf-pattern.png") repeat;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.potion-pair-container {
+  background: #faf4e4;
+  border: 3px dotted #97C8D9;
+  padding: 90px 80px 80px; 
+  border-radius: 10px;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px; 
+  position: relative;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.badge {
+  background: #F9C27A;
+  color: #2d1b0f;
+  font-family: 'IM Fell DW Pica', serif;
+  font-style: italic;
+  font-size: 2.3rem;
+  padding: 24px 230px; 
+  border-radius: 50% / 45%;
+  position: absolute;
+  top: -15px;
+  left: -90px;
+  transform: rotate(-12deg);
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.15);
+  white-space: nowrap;
+  text-align: center;
+}
+
+.potion-pair-text h2 {
+  font-family: 'IM FELL DW Pica', serif;
+  font-size: 6.6rem;
+  margin: 20px 0 25px;
+  font-style: italic;
+}
+
+.potion-pair-text h2 .pink {
+  color: #f28ab2; 
+}
+
+.potion-pair-text h2 .green {
+  color: #4b6d46; 
+}
+
+.potion-pair-text h2 .dark {
+  color: #2d1b0f; 
+}
+
+.potion-pair-text p {
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #2d1b0f; 
+  max-width: 500px;
+}
+
+.potion-pair-image img {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  display: block;
+}
+.locations-section {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 800px;
+  margin: auto;
+  font-family: 'IM Fell DW Pica', serif;
+}
+
+.location-box {
+  background: #f9c27a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.location-box summary {
+  cursor: pointer;
+  padding: 20px;
+  font-size: 1.8rem;
+  font-style: italic;
+  color: #2F5784;          
+  background: #f9c27a;     
+  list-style: none;        
+  text-align: center;
+  border-radius: 6px 6px 0 0;
+}
+
+.location-box[open] summary {
+  background: #f9c27a;   
+}
+
+.location-content {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #faf4e4;
+  flex-wrap: wrap;
+}
+
+.location-content img {
+  max-width: 300px;
+  border-radius: 6px;
+}
+
+.location-content .info {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #2d1b0f;
+}
+
+.footer {
+    background-color: #F2F0F0;
+    margin-top: 20px;
+    padding: 24px 40px 10px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-col--logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo { 
+    height: 80px; 
+    width: auto; 
+}
+
+.footer-heading {
+    font-family: 'IM Fell DW Pica', serif;
+    color: #7a3f22;
+    font-size: 1.3rem;
+    margin: 0 0 8px;
+}
+
+.footer-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'IM Fell DW Pica', serif;
+    color: #2d2414;
+    line-height: 1.6;
+}
+
+.footer-list li + li { margin-top: 8px; }
+
+.footer-list .icon {
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 8px;
+    width: 25px;
+    height: 25px;
+}
+.footer-copy {
+    text-align: center;
+    font-family: 'IM Fell DW Pica', serif;
+    color: #7a3f22;
+    margin-top: 18px;
+    padding-top: 10px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .nav-links a { font-size: 1.4rem; }
+}
+
+/* --- responsive fixes --- */
+@media (max-width: 1024px) {
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+  .pixie-picks-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .potion-pair-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .potion-pair-image img {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  .nav-links {
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .hero {
+    height: 500px;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+    padding: 0 10px;
+  }
+  .pixie-picks-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .header2 h2 {
+    font-size: 16px;
+    white-space: normal;
+    animation: none;
+    text-align: center;
+    padding: 5px;
+  }
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+  .pixie-picks-title {
+    font-size: 2rem;
+  }
+  .potion-pair-text h2 {
+    font-size: 3rem;
+  }
+  .location-box summary {
+    font-size: 1.2rem;
+  }
+  .location-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .location-content img {
+    max-width: 100%;
+  }
+}
